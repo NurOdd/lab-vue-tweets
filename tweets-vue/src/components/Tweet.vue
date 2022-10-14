@@ -1,20 +1,19 @@
 <template>
     <div class="tweet">
-        <img :src="props.tweet.user.image" class="profile" alt="profile" />
-
+        <ProfileImage :image="props.tweet.user.image" />
+       
         <div class="body">
             <div class="top">
-                <span class="user">
-                    <span class="name">{{props.tweet.user.name}}</span>
-                    <span class="handle">@{{props.tweet.user.handle}}</span>
-                </span>
-
-                <span class="timestamp">{{propts.tweet.timestamp}}</span>
+             
+                <User :name="props.tweet.user.name" :hanfle="props.tweet.user.name" />
+               
+                
+                <Timestamp :timestamp="props.tweet.timestamp" />
+           
             </div>
 
-            <p class="message">
-          {{props.tweet.message}}
-            </p>
+                <Message :message="props.tweet.message" />
+
 
             <div class="actions">
                 <!-- Font Awesome icons -->
